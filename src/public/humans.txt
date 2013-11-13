@@ -1,0 +1,11 @@
+/* TEAM */
+Engineer: Zachary Fogg
+Site: http://zachfogg.com
+Twitter: @zfogg
+Location: College Park, MD, USA
+
+/* SITE */
+Last update: 2013/11
+Standards: HTML5, CSS3
+Components: jQuery, Bootstrap 3, Backbone, Underscore
+Software: Node.js, Grunt, Jade, CoffeeScript, SASS

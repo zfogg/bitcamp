@@ -1,158 +1,121 @@
 /* ==========================================================================
- * HTML5 Boilerplate styles - h5bp.com (generated via initializr.com)
+ * Main Site Styles
  * ========================================================================== */
 
-/* --------------------------------------------------------------------------
- * FILE PORTED FROM: https://github.com/h5bp/html5-boilerplate
- * -------------------------------------------------------------------------- */
+@import "compass/reset"
+@import "compass/css3"
 
-html, button, input, select, textarea
-    color: #222
+@import "fonts"
+
+
+$white_ish: #fafafa
+$grey_ish:  #555555
+$black_ish: #1f1f1f
+$orange: rgb(241, 90, 36)
+
+$xs-max: 768px
+$sm-max: 992px
+$md-max: 1200px
+
+$xs-min: 320px
+$sm-min: 768px
+$md-min: 992px
+$lg-min: 1200px
+
+
+*
+  -moz-box-sizing: border-box
+  -webkit-box-sizing: border-box
+  box-sizing: border-box
+
+html
+  background: url('/images/bg.jpg') no-repeat center top scroll
+  background-color: black
+  height: 100%
+  min-height: 100%
+  min-width: $xs-min
+  @media screen and (max-width: 850px)
+    background-size: 850px
+  background-size: 100%
 
 body
-    font-size: 10px
-    line-height: 1.4
+  background-color: transparent
+  color: $white_ish
+  font-family: 'aleo-regular', sans-serif
+  font-size: 18px
+  text-shadow: 1px 0 $grey_ish
 
-::-moz-selection, ::selection
-    background: #b3d4fc
-    text-shadow: none
+p, h1, h2, h3, h4, h5, h6
+  line-height: 1.2em
+  margin-bottom: 20px
+p
+  padding: 5px 0
+h1
+  font-size: 95px
+  font-family: 'aleo-bold', sans-serif
+h2
+  font-size: 28px
 
 hr
-    display: block
-    height: 1px
-    border: 0
-    border-top: 1px solid #ccc
-    margin: 1em 0
-    padding: 0
+  border-top: 1px dashed $white_ish
+  opacity: 0.2
+  margin: 50px 20px
 
-img
+button
+  font-family: 'aleo-bold', sans-serif
+  line-height: 1.2em
+  border: none
+  color: $white_ish
+  border-radius: 6px
+
+#header
+  img
     vertical-align: middle
+  #logo
+    margin-right: 20px
+  padding: 75px 0 60px
+  text-align: center
 
-fieldset
-    border: 0
-    margin: 0
-    padding: 0
+#main
+  #bitcamp-blurb
+    text-align: center
+    @media screen and (min-width: $sm-min)
+      text-align: right
+    .wrapper
+      padding-right: 11px
+  #bitcamp-signup
+    @media screen and (max-width: $xs-max)
+      text-align: center
+    .wrapper
+      padding-left: 11px
+    button
+      border: none
+      padding: 15px
+      background-color: $orange
+      box-shadow: 0 3px 1px $black_ish
+  #bitcamp-description
+    text-align: justify
+  #bitcamp-collaborate
+    text-align: center
+    button#bitcamp-contact-us
+      position: relative
+      padding: 15px
+      background: transparent
+      border: 1px dashed $white_ish
 
-textarea
-    resize: vertical
-
-.chromeframe
-    margin: 0.2em 0
-    background: #ccc
-    color: #000
-    padding: 0.2em 0
-
-/* ===== Initializr Styles ==================================================
- * Author: Jonathan Verrecchia - verekia.com/initializr/responsive-template
- * ========================================================================== */
-
-
-/* apply a natural box layout model to all elements */
-* 
-    -moz-box-sizing: border-box
-    -webkit-box-sizing: border-box
-    box-sizing: border-box
-
-
-/* ==========================================================================
- * App Specific classes
- * ========================================================================== */
-
-// @import "layout/layout.sass" // place your smacss layout file
-// @import "modules/buttons.sass" // place your smacss modules file
-
-/* ==========================================================================
- * Helper classes
- * ========================================================================== */
-
-.ir
-    background-color: transparent
-    border: 0
-    overflow: hidden
-    *text-indent: -9999px
-    &:before
-        content: ""
-        display: block
-        width: 0
-        height: 100%
-
-.hidden
-    display: none !important
-    visibility: hidden
-
-.visuallyhidden
-    border: 0
-    clip: rect(0 0 0 0)
-    height: 1px
-    margin: -1px
-    overflow: hidden
-    padding: 0
-    position: absolute
-    width: 1px
-    &.focusable
-        &:active, &:focus
-            clip: auto
-            height: auto
-            margin: 0
-            overflow: visible
-            position: static
-            width: auto
-
-.invisible
-    visibility: hidden
-
-.clearfix
-    &:before
-        content: " "
-        display: table
-    &:after
-        content: " "
-        display: table
-        clear: both
-    *zoom: 1
-
-/* ==========================================================================
- * Print styles
- * ========================================================================== */
-
-@media print
-    *
-        background: transparent !important
-        color: #000 !important
-        /* Black prints faster: h5bp.com/s */
-        box-shadow: none !important
-        text-shadow: none !important
+#footer
+  font-size: 14px
+  padding-bottom: 180px
+  ul.footer-links
     a
-        text-decoration: underline
-        &:visited
-            text-decoration: underline
-        &[href]:after
-            content: " (" attr(href) ")"
-    abbr[title]:after
-        content: " (" attr(title) ")"
-    /*
-     * Don't show links for images, or javascript/internal links */
-    .ir a:after
-        content: ""
-    a
-        &[href^="javascript:"]:after, &[href^="#"]:after
-            content: ""
-    pre, blockquote
-        border: 1px solid #999
-        page-break-inside: avoid
-    thead
-        display: table-header-group
-        /* h5bp.com/t */
-    tr
-        page-break-inside: avoid
-    img
-        page-break-inside: avoid
-        max-width: 100% !important
-    @page
-        margin: 0.5cm
+      color: $white_ish
+    text-align: center
+    li
+      list-style: none
+      margin-bottom: 10px
+      &.spacer
+        display: none
+        margin: 0 10px
+      @media screen and (min-width: $xs-max)
+        display: inline !important
 
-    p, h2, h3
-        orphans: 3
-        widows: 3
-    h2, h3
-        page-break-after: avoid
