@@ -26,15 +26,17 @@ WebApp Boilderplate
   ```bash
   sudo npm install -g coffee-script
   ```
-4. install **SASS**
+4. install **SASS** and **Compass**
   [http://sass-lang.com/](http://sass-lang.com/)
   ```bash
   sudo gem install sass
+  ```bash
+  sudo gem install compass
   ```
 5. install **jade**
   [https://github.com/visionmedia/jade#readme](https://github.com/visionmedia/jade#readme)
   ```bash
-  sudo npm install jade
+  sudo npm install -g jade
   ```
 6. install **grunt**
   ```bash
@@ -50,23 +52,23 @@ WebApp Boilderplate
 ## Common Tasks:
 
 ### Grunt start watching files to auto compile
-
 ```bash
 grunt watch
 ```
 
 ### Grunt recompile bower components
-
 ```bash
 bower concat:plugins
 ```
 
+### Install components (bower)
+```bash
+bower install
+```
+
 ### Update components (bower)
 remember to recompile components after updating
-
 ```bash
 bower update
 ```
-
-
 
