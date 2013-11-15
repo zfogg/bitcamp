@@ -29,9 +29,7 @@ WebApp Boilderplate
 4. install **SASS** and **Compass**
   [http://sass-lang.com/](http://sass-lang.com/)
   ```bash
-  sudo gem install sass
-  ```bash
-  sudo gem install compass
+  sudo gem install sass compass
   ```
 5. install **jade**
   [https://github.com/visionmedia/jade#readme](https://github.com/visionmedia/jade#readme)
@@ -40,7 +38,7 @@ WebApp Boilderplate
   ```
 6. install **grunt**
   ```bash
-  sudo npm install -g grunt-cli
+  sudo npm install -g grunt grunt-cli
   ```
 7. install **bower**
   [http://twitter.github.io/bower/](http://twitter.github.io/bower/)
