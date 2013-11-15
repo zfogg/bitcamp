@@ -82,7 +82,8 @@ module.exports = (grunt) ->
             debug: false
 
         files:
-          "public/index.html": ["src/public/jade/index.jade"]
+          "public/index.html":
+            ["src/public/jade/index.jade"]
 
     watch:
       options: livereload: true
@@ -90,7 +91,8 @@ module.exports = (grunt) ->
         files: ["src/public/jade/**/*.jade"]
         tasks: ["jade"]
       css:
-        files: ["src/public/sass/*.scss"]
+        files: ["src/public/sass/*.scss",
+                "src/public/sass/*.sass"]
         tasks: ["compass"]
       js:
         files: ["src/public/javascript/**/*.jade"]
@@ -107,5 +109,4 @@ module.exports = (grunt) ->
     "concat"
     "jade"
     "coffee"
-    "compass"
-  ]
+    "compass"]

@@ -28,15 +28,29 @@ $lg-min: 1200px
   -webkit-box-sizing: border-box
   box-sizing: border-box
 
-html
+@mixin background
   background: url('/images/bg.jpg') no-repeat center top scroll
-  background-color: black
-  height: 100%
-  min-height: 100%
-  min-width: $xs-min
   @media screen and (max-width: 850px)
     background-size: 850px
   background-size: 100%
+  min-height: 100%
+
+html
+  @include background
+  background-color: black
+
+body
+  position: relative
+  min-width: $xs-min
+  #background
+    @include background
+    -webkit-filter: blur(8px)
+
+    position: absolute
+    top: 0
+    right: 0
+    left: 0
+    z-index: -1
 
 body
   background-color: transparent
@@ -68,13 +82,22 @@ button
   color: $white_ish
   border-radius: 6px
 
+
 #header
-  img
-    vertical-align: middle
-  #logo
-    margin-right: 20px
   padding: 75px 0 60px
   text-align: center
+  #logo
+    $logo-size: 135px
+    display: inline-block
+    vertical-align: middle
+    background-image: url('/images/badge.svg')
+    background-repeat: no-repeat
+    background-size: $logo-size $logo-size
+    background-position: center center
+    width: $logo-size
+    height: $logo-size
+    @media screen and (min-width: $xs-min)
+      margin-right: 20px
 
 #main
   #bitcamp-blurb

@@ -17,6 +17,8 @@ app.configure ->
     app.use(express.bodyParser())
     console.log __dirname
     app.use(express.static(path.join(__dirname, "/public")))
+    app.use(express.favicon(__dirname + "/public/images/favicon.ico"))
+
 
 # ej. expose service
 # app.get '/users', users.findAll

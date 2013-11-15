@@ -19,7 +19,8 @@
     app.use(express.logger("dev"));
     app.use(express.bodyParser());
     console.log(__dirname);
-    return app.use(express["static"](path.join(__dirname, "/public")));
+    app.use(express["static"](path.join(__dirname, "/public")));
+    return app.use(express.favicon(__dirname + "/public/images/favicon.ico"));
   });
 
   http.createServer(app).listen(app.get('port'), function() {
