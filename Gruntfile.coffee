@@ -92,6 +92,7 @@ module.exports = (grunt) ->
           "public/*.html"
           "public/**/*.js"
         ]
+        tasks: ["jade", "coffee", "compass"]
 
       jade:
         files: ["src/public/**/*.jade"]
