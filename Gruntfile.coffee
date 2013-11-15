@@ -85,26 +85,16 @@ module.exports = (grunt) ->
           "public/index.html": ["src/public/jade/index.jade"]
 
     watch:
-      livereload:
-        options: livereload: true
-        files: [
-          "public/**/*.css"
-          "public/*.html"
-          "public/**/*.js"
-        ]
-        tasks: ["jade", "coffee", "compass"]
-
-      jade:
-        files: ["src/public/**/*.jade"]
+      options: livereload: true
+      html:
+        files: ["src/public/jade/**/*.jade"]
         tasks: ["jade"]
-
-      coffee:
-        files: ["src/**/*.coffee"]
-        tasks: ["coffee"]
-
-      compass:
-        files: ["src/public/sass/**/*.sass"]
+      css:
+        files: ["src/public/sass/*.scss"]
         tasks: ["compass"]
+      js:
+        files: ["src/public/javascript/**/*.jade"]
+        tasks: ["coffee"]
 
   grunt.loadNpmTasks "grunt-contrib-copy"
   grunt.loadNpmTasks "grunt-contrib-compass"
