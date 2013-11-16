@@ -18,33 +18,25 @@ WebApp Boilderplate
 1. download -> install **git**
   [http://git-scm.com/download/](http://git-scm.com/download/)
 
-2. download -> install **NodeJS**
+2. download -> install **Node.js** and **NPM**
   [http://nodejs.org/](http://nodejs.org/)
 
-3. install **coffeescript**
-  [http://coffeescript.org/](http://coffeescript.org/)
+3. install **global Node.js dependencies**
   ```bash
-  sudo npm install -g coffee-script
+  sudo npm install -g coffee-script grunt-cli bower
   ```
-4. install **SASS** and **Compass**
+4. install **back-end dependencies**
+  ```bash
+  npm install
+  ```
+5. install **front-end dependencies**
+  ```bash
+  bower install
+  ```
+6. install **SASS** and **Compass**
   [http://sass-lang.com/](http://sass-lang.com/)
   ```bash
-  sudo gem install sass compass
-  ```
-5. install **jade**
-  [https://github.com/visionmedia/jade#readme](https://github.com/visionmedia/jade#readme)
-  ```bash
-  sudo npm install -g jade
-  ```
-6. install **grunt**
-  [http://gruntjs.com/](http://gruntjs.com/)
-  ```bash
-  sudo npm install -g grunt-cli
-  ```
-7. install **bower**
-  [http://twitter.github.io/bower/](http://twitter.github.io/bower/)
-  ```bash
-  npm install -g bower
+  gem install sass compass
   ```
 
 
@@ -63,10 +55,5 @@ node server.js
 ### Auto-build site and auto-refresh browser when necessary
 ```bash
 grunt watch
-```
-
-### Install front-end components (Bower)
-```bash
-bower install
 ```
 

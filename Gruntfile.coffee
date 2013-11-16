@@ -22,6 +22,13 @@ module.exports = (grunt) ->
           src: "*.css"
           dest: "public/css/"
         ]
+      public_static:
+        files: [
+          expand: true
+          cwd: "src/public"
+          src: ["*", "!**/*"]
+          dest: "public/"
+        ]
 
     coffee:
       cpublic:
