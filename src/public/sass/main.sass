@@ -8,9 +8,10 @@
 @import "fonts"
 
 
-$white_ish: #fafafa
-$grey_ish:  #555555
-$black_ish: #1f1f1f
+$white_ish:    #fafafa
+$grey_ish:     #555555
+$darkgrey_ish: #1f1f1f
+$black_ish:    #000000
 $orange: rgb(241, 90, 36)
 
 $xs-max: 768px
@@ -22,6 +23,8 @@ $sm-min: 768px
 $md-min: 992px
 $lg-min: 1200px
 
+$background-height: 1278px
+
 
 *
   -moz-box-sizing: border-box
@@ -29,28 +32,35 @@ $lg-min: 1200px
   box-sizing: border-box
 
 @mixin background
-  background: url('/images/bg.jpg') no-repeat center top scroll
-  @media screen and (max-width: 850px)
-    background-size: 850px
-  background-size: 100%
   min-height: 100%
+  background-size: 100%
+  @media screen and (max-width: 850px)
+    background-size: 850px auto
 
 html
+  background: url(/images/bg.jpg) no-repeat center top
   @include background
-  background-color: black
+  background-color: $black_ish
 
 body
   position: relative
   min-width: $xs-min
-  #background
-    @include background
+  #background1, #background2
     -webkit-filter: blur(8px)
-
     position: absolute
-    top: 0
+    top:   0
     right: 0
-    left: 0
-    z-index: -1
+    left:  0
+  #background1
+    background: url(/images/bg.jpg) no-repeat center top
+    @include background
+    z-index: -2
+  #background2
+    @media only screen and (max-width: $xs-max)
+      background: -webkit-gradient(linear, center top, center bottom, from(transparent), to($black_ish), color-stop(50%, rgba(#000, 0)), color-stop(65%, rgba($black_ish, 0.9)))
+      min-height: 100%
+      overflow: hidden
+      z-index: -1
 
 body
   background-color: transparent
@@ -115,7 +125,7 @@ button
       border: none
       padding: 15px
       background-color: $orange
-      box-shadow: 0 3px 1px $black_ish
+      box-shadow: 0 3px 1px $darkgrey_ish
   #bitcamp-description
     text-align: justify
   #bitcamp-collaborate
