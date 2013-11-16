@@ -34,7 +34,6 @@ Bitcamp is organized and put together by
 5. install **front-end dependencies**
   ```bash bower install```
 6. install **SASS** and **Compass**
-  [http://sass-lang.com/](http://sass-lang.com/)
   ```bash gem install sass compass```
 
 
