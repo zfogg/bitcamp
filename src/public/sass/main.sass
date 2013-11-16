@@ -28,7 +28,7 @@ $background-height: 1278px
 
 *
   -moz-box-sizing: border-box
-  -webkit-box-sizing: border-box
+  @include box-sizing(border-box)
   box-sizing: border-box
 
 @mixin background
@@ -44,7 +44,7 @@ body
   position: relative
   min-width: $xs-min
   #background1, #background2
-    -webkit-filter: blur(8px)
+    @include filter(blur(8px))
     position: absolute
     top:   0
     right: 0
@@ -55,7 +55,7 @@ body
     z-index: -2
   #background2
     @media only screen and (max-width: $xs-max)
-      background: -webkit-gradient(linear, center top, center bottom, from(transparent), to($black_ish), color-stop(50%, rgba(#000, 0)), color-stop(65%, rgba($black_ish, 0.9)))
+      @include background-image(linear-gradient(color-stops(transparent, transparent 50%, rgba($black_ish, 0.9) 65%, $black_ish)))
       min-height: 100%
       overflow: hidden
       z-index: -1
