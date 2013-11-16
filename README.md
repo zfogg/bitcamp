@@ -22,22 +22,14 @@ WebApp Boilderplate
   [http://nodejs.org/](http://nodejs.org/)
 
 3. install **global Node.js dependencies**
-  ```bash
-  sudo npm install -g coffee-script grunt-cli bower
-  ```
+  ```bash sudo npm install -g coffee-script grunt-cli bower```
 4. install **back-end dependencies**
-  ```bash
-  npm install
-  ```
+  ```bash npm install```
 5. install **front-end dependencies**
-  ```bash
-  bower install
-  ```
+  ```bash bower install```
 6. install **SASS** and **Compass**
   [http://sass-lang.com/](http://sass-lang.com/)
-  ```bash
-  gem install sass compass
-  ```
+  ```bash gem install sass compass```
 
 
 ## Common Tasks:
