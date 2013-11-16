@@ -18,6 +18,8 @@
     "tests"
   ],
   "dependencies": {
-    "bootstrap": "~3.0.2"
+    "bootstrap": "~3.0.2",
+    "jquery": "~2.0.3",
+    "underscore": "~1.5.2"
   }
 }

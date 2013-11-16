@@ -11,47 +11,10 @@ module.exports = (grunt) ->
           "components/jquery/jquery.min.js"
           "components/bootstrap/dist/js/bootstrap.js"
           "components/underscore/underscore-min.js"
-          "components/backbone/backbone-min.js"
-          "components/handlebars.js/dist/handlebars.js"
         ]
         dest: "public/js/plugins.js"
 
     copy:
-      normalize:
-        files: [
-          expand: true
-          cwd: "components/normalize-css/"
-          src: "normalize.css"
-          dest: "public/css/"
-          filter: "isFile"
-        ]
-
-      fontawesomecss:
-        files: [
-          {
-            expand: true
-            cwd: "components/font-awesome/css/"
-            src: "font-awesome.min.css"
-            dest: "public/css/"
-            filter: "isFile"
-          }
-          {
-            expand: true
-            cwd: "components/font-awesome/font/"
-            src: "*"
-            dest: "public/font/"
-          }
-        ]
-
-      favicon:
-        files: [
-          expand: true
-          cwd: "src/public/"
-          src: "favicon.ico"
-          dest: "public/"
-          filter: "isFile"
-        ]
-
       bootstrap:
         files: [
           expand: true
@@ -91,8 +54,7 @@ module.exports = (grunt) ->
         files: ["src/public/jade/**/*.jade"]
         tasks: ["jade"]
       css:
-        files: ["src/public/sass/*.scss",
-                "src/public/sass/*.sass"]
+        files: ["src/public/sass/*.scss", "src/public/sass/*.sass"]
         tasks: ["compass"]
       js:
         files: ["src/public/javascript/**/*.jade"]
