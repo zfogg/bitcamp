@@ -38,7 +38,7 @@ WebApp Boilderplate
   ```
 6. install **grunt**
   ```bash
-  sudo npm install -g grunt grunt-cli
+  sudo npm install -g grunt-cli
   ```
 7. install **bower**
   [http://twitter.github.io/bower/](http://twitter.github.io/bower/)
@@ -49,24 +49,23 @@ WebApp Boilderplate
 
 ## Common Tasks:
 
-### Grunt start watching files to auto compile
+### Build entire site
+```bash
+grunt
+```
+
+### Run back-end server
+```bash
+node server.js
+```
+
+### Auto-build site and auto-refresh browser when necessary
 ```bash
 grunt watch
 ```
 
-### Grunt recompile bower components
-```bash
-bower concat:plugins
-```
-
-### Install components (bower)
+### Install front-end components (Bower)
 ```bash
 bower install
-```
-
-### Update components (bower)
-remember to recompile components after updating
-```bash
-bower update
 ```
 
