@@ -40,17 +40,11 @@ Bitcamp is organized and put together by
 ## Common Tasks:
 
 ### Build entire site
-```bash
-grunt
-```
+```bash grunt```
 
 ### Run back-end server
-```bash
-node server.js
-```
+```bash node server.js```
 
-### Auto-build site and auto-refresh browser when necessary
-```bash
-grunt watch
-```
+### Auto-build site and live-reload browser
+```bash grunt watch```
 
