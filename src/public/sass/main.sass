@@ -38,8 +38,6 @@ $background-height: 1278px
     background-size: 850px auto
 
 html
-  background: url(/images/bg.jpg) no-repeat center top
-  @include background
   background-color: $black_ish
 
 body
@@ -66,8 +64,17 @@ body
   background-color: transparent
   color: $white_ish
   font-family: 'aleo-regular', sans-serif
-  font-size: 18px
   text-shadow: 1px 0 $grey_ish
+  font-size: 10px
+  @media only screen and (min-width: $xs-min)
+    font-size: 12px
+  @media only screen and (min-width: $sm-min)
+    font-size: 14px
+  @media only screen and (min-width: $md-min)
+    font-size: 15px
+  @media only screen and (min-width: $lg-min)
+    font-size: 16px
+
 
 p, h1, h2, h3, h4, h5, h6
   line-height: 1.2em
@@ -75,10 +82,10 @@ p, h1, h2, h3, h4, h5, h6
 p
   padding: 5px 0
 h1
-  font-size: 95px
+  font-size: 5.9em
   font-family: 'aleo-bold', sans-serif
 h2
-  font-size: 28px
+  font-size: 1.8em
 
 hr
   border-top: 1px dashed $white_ish
@@ -91,7 +98,6 @@ button
   border: none
   color: $white_ish
   border-radius: 6px
-
 
 #header
   padding: 75px 0 60px
@@ -115,12 +121,14 @@ button
     @media screen and (min-width: $sm-min)
       text-align: right
     .wrapper
-      padding-right: 11px
+      @media only screen and (min-width: $sm-min)
+        padding-right: 11px
   #bitcamp-signup
     @media screen and (max-width: $xs-max)
       text-align: center
     .wrapper
-      padding-left: 11px
+      @media only screen and (min-width: $sm-min)
+        padding-left: 11px
     button
       border: none
       padding: 15px
@@ -128,20 +136,21 @@ button
       box-shadow: 0 3px 1px $darkgrey_ish
   #bitcamp-summary
     text-align: center
-    font-size: 40px
+    font-size: 2.3em
   #bitcamp-description
     text-align: justify
   #bitcamp-collaborate
     text-align: center
-    button#bitcamp-contact-us
-      position: relative
-      padding: 15px
-      background: transparent
-      border: 1px dashed $white_ish
+    #bitcamp-contact-us
+      button
+        position: relative
+        padding: 15px
+        background: transparent
+        border: 1px dashed $white_ish
 
 #footer
-  font-size: 14px
-  padding-bottom: 180px
+  font-size: 0.8em
+  padding-bottom: 80px
   ul.footer-links
     a
       color: $white_ish

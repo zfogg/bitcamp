@@ -4,8 +4,8 @@ extends layout
 block index
   .container
     #bitcamp-description.row
-      p#bitcamp-summary
-        | A 36 hour hackathon at the University of Maryland
+      #bitcamp-summary.col-xs-12
+        p A 36 hour hackathon at the University of Maryland
       hr
 
     .row
@@ -34,22 +34,23 @@ block index
 
     #bitcamp-description.row
 
-      p.col-xs-12.
-        Camp is a place for creation, exploration, and imagination. How can you inject technology into your passions to make awesome meaningful, products? While hacking here on the University of Maryland campus, you'll connect with the interesting students and tech leaders through inspirational talks, stimulating workshops, and wild activities.
+      p.col-xs-12
+        | Camp is a place for creation, exploration, and imagination. How can you inject technology into your passions to make awesome meaningful, products? While hacking here on the University of Maryland campus, you'll connect with the interesting students and tech leaders through inspirational talks, stimulating workshops, and wild activities.
 
       hr
 
     #bitcamp-collaborate.row
-      h2 Get in on the fun!
+      h2.col-xs-12 Get in on the fun!
 
-      p
+      p.col-xs-12
         | From sponsors and partners to speakers and evangelists,
         br
         | we're looking for people and organizations to join us.
         br
         | This thing is happening, where do you fit in?
 
-      a(href="mailto:jeff@bitcamp.com")
-        button#bitcamp-contact-us contact us
+      #bitcamp-contact-us.col-xs-12
+        a(href="mailto:jeff@bitcamp.com")
+          button contact us
 
       hr
