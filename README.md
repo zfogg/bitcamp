@@ -1,16 +1,22 @@
-WebApp Boilderplate
+# Bitcamp
+
+The main website for the University of Maryland's February hacking event.
+
+Bitcamp is organized and put together by
+* [Terrapin Hackers](http://terrapinhackers.com/)
+* [Startup Shell](http://startupshell.org/)
+
 
 ## Dependencies
 
-* [http://nodejs.org/](http://nodejs.org/)
-* [http://git-scm.com/](http://git-scm.com/)
-* [http://coffeescript.org/](http://coffeescript.org/)
-* [http://sass-lang.com/](http://sass-lang.com/)
-* [http://jade-lang.com/](http://jade-lang.com/)
-* [http://nodejs.org/](http://nodejs.org/)
-* [http://expressjs.com/](http://expressjs.com/)
-* [http://gruntjs.com/](http://gruntjs.com/)
-* [http://twitter.github.com/bower/](http://twitter.github.com/bower/)
+* [NodeJS](http://nodejs.org/)
+* [Git](http://git-scm.com/)
+* [CoffeeScript](http://coffeescript.org/)
+* [SASS](http://sass-lang.com/)
+* [Jade-lang](http://jade-lang.com/)
+* [ExpressJS](http://expressjs.com/)
+* [GruntJS](http://gruntjs.com/)
+* [Bower](http://twitter.github.com/bower/)
 
 
 ## Installation
@@ -18,10 +24,10 @@ WebApp Boilderplate
 1. download -> install **git**
   [http://git-scm.com/download/](http://git-scm.com/download/)
 
-2. download -> install **Node.js** and **NPM**
+2. download -> install **NodeJS** and **NPM**
   [http://nodejs.org/](http://nodejs.org/)
 
-3. install **global Node.js dependencies**
+3. install **global NodeJS dependencies**
   ```bash sudo npm install -g coffee-script grunt-cli bower```
 4. install **back-end dependencies**
   ```bash npm install```
