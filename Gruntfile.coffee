@@ -78,16 +78,33 @@ module.exports = (grunt) ->
           ]
 
     watch:
-      options: livereload: true
       html:
+        options:
+          interrupt: true
+          livereload: true
         files: ["src/public/jade/**/*.jade"]
         tasks: ["jade"]
       css:
-        files: ["src/public/sass/*.scss", "src/public/sass/*.sass"]
-        tasks: ["compass"]
+        options:
+          interrupt: true
+        files: [
+          "src/public/sass/*.scss"
+          "src/public/sass/*.sass"
+        ]
+        tasks: ["compass:dist"]
       js:
+        options:
+          interrupt: true
+          livereload: true
         files: ["src/public/js/**/*.coffee"]
         tasks: ["coffee:public", "uglify:public"]
+      livereload:
+        options:
+          livereload: true
+        files: ["public/css/*.css"]
+      server:
+        files: ["src/server/*.coffee"]
+        tasks: ["coffee:server"]
 
   grunt.loadNpmTasks "grunt-contrib-copy"
   grunt.loadNpmTasks "grunt-contrib-jade"
