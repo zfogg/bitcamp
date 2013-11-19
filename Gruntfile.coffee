@@ -15,14 +15,14 @@ module.exports = (grunt) ->
           expand: true
           flatten: true
           src: ['components/**/*.map']
-          dest: 'public/js/'
-          filter: 'isFile'
+          dest: "public/js/"
+          filter: "isFile"
         ]
       public_static:
         files: [
           expand: true
           cwd: "src/public"
-          src: ["*", "!**/*"]
+          src: ["*"]
           dest: "public/"
           filter: "isFile"
         ]
