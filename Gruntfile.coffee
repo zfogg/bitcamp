@@ -43,7 +43,7 @@ module.exports = (grunt) ->
           config: "compass.config.rb"
 
     coffee:
-      cpublic:
+      public:
         options:
           sourceMap: true
           bare: true
@@ -51,7 +51,7 @@ module.exports = (grunt) ->
           "public/js/main.js": [
             "src/public/js/main.coffee"
           ]
-      cserver:
+      server:
         options:
           bare: true
         files:
@@ -60,17 +60,21 @@ module.exports = (grunt) ->
           ]
 
     uglify:
+      public:
+        options:
+          sourceMappingURL: "/js/main.min.map"
+          sourceMapIn: "public/js/main.js.map"
+          sourceMap: "public/js/main.min.map"
+        files:
+          "public/js/main.min.js": [
+            "public/js/main.js"
+          ]
       plugins:
         files:
           "public/js/plugins.min.js": [
             "components/jquery/jquery.min.js"
             "components/bootstrap/dist/js/bootstrap.js"
             "components/underscore/underscore-min.js"
-          ]
-      main:
-        files:
-          "public/js/main.min.js": [
-            "public/js/main.js"
           ]
 
     watch:
@@ -82,8 +86,8 @@ module.exports = (grunt) ->
         files: ["src/public/sass/*.scss", "src/public/sass/*.sass"]
         tasks: ["compass"]
       js:
-        files: ["src/public/js/**/*.jade"]
-        tasks: ["coffee"]
+        files: ["src/public/js/**/*.coffee"]
+        tasks: ["coffee:public", "uglify:public"]
 
   grunt.loadNpmTasks "grunt-contrib-copy"
   grunt.loadNpmTasks "grunt-contrib-jade"

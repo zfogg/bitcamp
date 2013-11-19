@@ -11,7 +11,7 @@
 $white_ish:    #fafafa
 $grey_ish:     #555555
 $darkgrey_ish: #1f1f1f
-$black_ish:    #000000
+$black_ish:    #030303
 $orange: rgb(241, 90, 36)
 
 $xs-max: 768px
@@ -124,15 +124,17 @@ button
     .wrapper
       @media only screen and (min-width: $sm-min)
         padding-right: 11px
-  #bitcamp-signup
+  #bitcamp-register
     @media screen and (max-width: $xs-max)
       text-align: center
     .wrapper
       @media only screen and (min-width: $sm-min)
         padding-left: 11px
     button
+      font-size: 1.25em
       border: none
-      padding: 15px
+      width: 200px
+      padding: 10px 0
       background-color: $orange
       box-shadow: 0 3px 1px $darkgrey_ish
   #bitcamp-summary
