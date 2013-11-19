@@ -23,5 +23,5 @@ app.configure "development", ->
 app.configure "production", ->
 
 
-app.listen app.get('port'), -> 
+app.listen app.get('port'), ->
   console.log("Serving bitcamp on port " + app.get('port')+".")
