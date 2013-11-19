@@ -2,7 +2,11 @@
 Engineer: Zachary Fogg
 Site: http://zachfogg.com
 Twitter: @zfogg
-Location: College Park, MD, USA
+
+Engineer: Jeff Hilnbrand
+Site: http://jhilmediadesign.com
+Twitter: @jhilmediadesign
+
 
 /* SITE */
 Last update: 2013/11
