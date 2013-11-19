@@ -35,12 +35,12 @@ Bitcamp is organized and put together by
 
 ## Common Tasks:
 
-### Build entire site from scratch
-```npm build```
+#### Build entire site from scratch
+```grunt```
 
-### Run back-end serve on port 1337
+#### Run back-end serve on port 1337
 ```PORT=1337 npm start```
 
-### Auto-build site and live-reload as you work
-```npm test```
+#### Auto-build site and live-reload as you work
+```grunt watch```
 
