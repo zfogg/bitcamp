@@ -1,27 +1,27 @@
-###
-    hello world!
-###
+#!/bin/coffe
 
-express = require("express")
-path = require("path")
-http = require("http")
 
-# ej. some service
-# users = require('./routes/users');
+express = require "express"
+path    = require "path"
+
 
 app = express()
 
+
 app.configure ->
-    app.set "port", process.env.PORT or 3000
-    app.use express.logger("dev") # 'default', 'short', 'tiny', 'dev'
-    app.use(express.bodyParser())
-    console.log __dirname
-    app.use(express.static(path.join(__dirname, "/public")))
-    app.use(express.favicon(__dirname + "/public/images/favicon.ico"))
+  app.set "port", process.env.PORT or 3000
+  app.use express.static(path.join(__dirname, "/public"))
+  app.use express.favicon(__dirname + "/public/images/favicon.ico")
+  app.use express.compress()
+  app.use [express.json(), express.urlencoded()]
+
+app.configure "development", ->
+  app.use express.logger("dev")
+  app.use require("connect-livereload")
+    port: 35729
+
+app.configure "production", ->
 
 
-# ej. expose service
-# app.get '/users', users.findAll
-
-http.createServer(app).listen app.get('port'), -> 
-    console.log("Express server listening on port " + app.get('port'))
+app.listen app.get('port'), -> 
+  console.log("Serving bitcamp on port " + app.get('port')+".")
