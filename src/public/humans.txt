@@ -3,7 +3,7 @@ Engineer: Zachary Fogg
 Site: http://zachfogg.com
 Twitter: @zfogg
 
-Engineer: Jeff Hilnbrand
+Designer: Jeff Hilnbrand
 Site: http://jhilmediadesign.com
 Twitter: @jhilmediadesign
 
