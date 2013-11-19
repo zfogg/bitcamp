@@ -27,24 +27,20 @@ Bitcamp is organized and put together by
 2. download -> install **NodeJS** and **NPM**
   [http://nodejs.org/](http://nodejs.org/)
 
-3. install **global NodeJS dependencies**
-  ```bash sudo npm install -g coffee-script grunt-cli bower```
-4. install **back-end dependencies**
-  ```bash npm install```
-5. install **front-end dependencies**
-  ```bash bower install```
-6. install **SASS** and **Compass**
-  ```bash gem install sass compass```
+3. install **global dependencies**
+  ```sudo npm install -g coffee-script grunt-cli bower```
+4. install **local dependencies**
+  ```npm install```
 
 
 ## Common Tasks:
 
-### Build entire site
-```bash grunt```
+### Build entire site from scratch
+```npm build```
 
-### Run back-end server
-```bash node server.js```
+### Run back-end serve on port 1337
+```PORT=1337 npm start```
 
-### Auto-build site and live-reload browser
-```bash grunt watch```
+### Auto-build site and live-reload as you work
+```npm test```
 
