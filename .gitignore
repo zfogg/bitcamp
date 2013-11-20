@@ -1,6 +1,8 @@
-node_modules/
+/node_modules/
 /public/*
-components/
-.*/
+/components/
 *.lock
 /server.js
+/build/
+/.bundle/
+/.sass-cache/

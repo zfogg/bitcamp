@@ -5,39 +5,35 @@ html.no-js
   head
     meta(charset="utf-8")
     meta(http-equiv="X-UA-Compatible", content="IE=edge,chrome=1")
-    title Bitcamp
-    meta(name="description", content="")
+    meta(name="description", content="A 36 hour hackathon at the University of Maryland.")
     meta(name="viewport", content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no")
+
+    title Bitcamp
 
     link(rel="shortcut icon", href="/img/favicon.ico", type="image/x-icon")
 
-    link(rel="stylesheet", href="/css/bootstrap.css")
-    link(rel="stylesheet", href="/css/main.css")
+    link(rel="stylesheet", href="/css/main.min.css")
 
   body
-    #backgrounds
-      #background1
-      #background2
+    #background
 
-    .header-container
-      header.wrapper.clearfix
-        #header
-          include header
+    #content.wrapper
 
-    .side-bar-container
-      #sidebar
+      .header-container
+        header.wrapper.clearfix
+          #header
+            include header
 
-    .main-container
-      .main.wrapper.clearfix
-        #main
-          block index
+      .main-container
+        .main.wrapper.clearfix
+          #main
+            block index
 
-    .footer-container
-      footer.wrapper
-        #footer
-          include footer
+      .footer-container
+        footer.wrapper.clearfix
+          #footer
+            include footer
 
     include templates
 
-    script(src="js/plugins.min.js")
     script(src="js/main.min.js")
