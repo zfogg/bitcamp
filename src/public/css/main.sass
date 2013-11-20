@@ -26,16 +26,16 @@ $lg-min: 1200px
 $background-height: 1278px
 
 
-::selection
-  background: $orange
-::-moz-selection
-  background: $orange
-
+$prefixes: ("-webkit-", "-moz-", "-o-", "")
+@mixin selection($color, $background)
+  @each $prefix in $prefixes
+    ::#{$prefix}selection
+      color: $color
+      background: $background
 
 *
-  -moz-box-sizing: border-box
   @include box-sizing(border-box)
-  box-sizing: border-box
+  @include selection("", $orange)
 
 
 html
@@ -100,7 +100,7 @@ button
 #header
   $logo_size: 135px
   $offset: 122px
-  padding: 75px 0 60px 0
+  padding: 7vw 0 5vw 0
   @media only screen and (max-width: $xs-max)
     #logo, #title
       text-align: center
@@ -129,10 +129,10 @@ button
     .wrapper
       @media only screen and (min-width: $sm-min)
         padding-left: 11px
-    button
-      border: none
-      background-color: $orange
-      @include box-shadow(2px 2px 1px darken($darkgrey_ish, 7%))
+    a
+      button
+        background-color: $orange
+        @include box-shadow(2px 2px 1px darken($darkgrey_ish, 7%))
 
   #bitcamp-summary
     text-align: center
@@ -147,11 +147,11 @@ button
     p
       font-size: 1.4em
 
-    #bitcamp-contact-us
-      button
-        position: relative
-        background: transparent
-        border: 1px solid $white
+    #bitcamp-contact-us button
+      display: inline-block
+      position: relative
+      background: transparent
+      border: 1px solid $white
 
 .button-typo
   font-size: 1.25em
