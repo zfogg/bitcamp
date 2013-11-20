@@ -46,6 +46,7 @@ body
   color: $white
   font-family: 'aleo-regular', sans-serif
   text-shadow: 1px 0 $grey_ish
+  min-width: 310px
 
   position: relative
   #background
@@ -69,11 +70,8 @@ body
   @media only screen and (max-width: $xs-max)
     font-size: 13px
   @media only screen and (max-width: $xs-min)
-    font-size: 12px
+    font-size: 11px
 
-
-.row
-  min-width: $xs-min
 
 p, h1, h2, h3, h4, h5, h6
   line-height: 1.2em
@@ -101,14 +99,19 @@ button
 
 #header
   $logo_size: 135px
+  $offset: 98px
   padding: 75px 0 60px 0
-  text-align: center
-  #logo, #title
-    vertical-align: middle
-    @media only screen and (min-width: 1.5*$xs-min)
-      margin: 0 8px
-  #title
-    display: inline-block
+  @media only screen and (max-width: $xs-max)
+    #logo, #title
+      text-align: center
+      vertical-align: middle
+  @media only screen and (min-width: $sm-min)
+    #logo img
+      margin-right: $offset
+      float: right
+    #title h1
+      margin-left: -1*$offset
+      line-height: $logo_size
 
 #main
   white-space: pre-line
