@@ -3,35 +3,31 @@ extends layout
 
 block index
   .container
-    #bitcamp-definition.row
-      #bitcamp-summary.col-xs-12
-        p A 36 hour hackathon at the University of Maryland
-      hr
-
     .row
       h2#bitcamp-blurb.col-sm-6
         | Take what you love,
-        br
         | fuse it with tech,
-        br
         | and build something the
-        br
         | world has never seen.
 
       #bitcamp-register.col-sm-6
         h2
           | Feb 21-23, 2014
-          br
           | College Park, MD
         a(target="_blank", href="https://docs.google.com/forms/d/1q52wjr8FBAw2KSp86mZMBns3y67llD29BNkpomjyOnM/viewform")
-          button register
+          button.button-typo register now
 
       .clearfix
       hr
 
+
+    #bitcamp-definition.row
+      #bitcamp-summary.col-xs-12
+        p A 36 hour hackathon at the University of Maryland
+
     #bitcamp-description.row
       p.col-xs-12
-        | Camp is a place for creation, exploration, and imagination. How can you inject technology into your passions to make awesome meaningful, products? While hacking here on the University of Maryland campus, you'll connect with the interesting students and tech leaders through inspirational talks, stimulating workshops, and wild activities.
+        | Camp is a place for creation, exploration, and imagination. How can you inject technology into your passions to make awesome, meaningful products? While hacking here on the University of Maryland campus, you'll connect with the interesting students and tech leaders through inspirational talks, stimulating workshops, and wild activities.
 
       .clearfix
       hr
@@ -39,15 +35,14 @@ block index
     #bitcamp-collaborate.row
       h2.col-xs-12 Get in on the fun!
 
-      p.col-xs-12
+      p.col-xs-push-2.col-xs-8.col-xs-pull-2
         | From sponsors and partners to speakers and evangelists,
-        br
         | we're looking for people and organizations to join us.
-        br
         | This thing is happening, where do you fit in?
+      .clearfix
 
       #bitcamp-contact-us.col-xs-12
-        a(href="mailto:hello@bitca.mp")
-          button contact us
+        a(href="mailto:hello@bitca.mp", target="_blank")
+          button.button-typo contact us
 
       hr
