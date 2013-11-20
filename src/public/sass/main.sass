@@ -42,7 +42,6 @@ html
 
 body
   position: relative
-  min-width: $xs-min
   #background1, #background2
     @include filter(blur(8px))
     position: absolute
@@ -65,16 +64,17 @@ body
   color: $white_ish
   font-family: 'aleo-regular', sans-serif
   text-shadow: 1px 0 $grey_ish
+
+  @media only screen and (max-width: $lg-min)
+    font-size: 16px
+  @media only screen and (max-width: $md-max)
+    font-size: 15px
+  @media only screen and (max-width: $sm-max)
+    font-size: 14px
+  @media only screen and (max-width: $xs-max)
+    font-size: 13px
   @media only screen and (max-width: $xs-min)
     font-size: 12px
-  @media only screen and (min-width: $xs-min)
-    font-size: 13px
-  @media only screen and (min-width: $sm-min)
-    font-size: 14px
-  @media only screen and (min-width: $md-min)
-    font-size: 15px
-  @media only screen and (min-width: $lg-min)
-    font-size: 16px
 
 
 p, h1, h2, h3, h4, h5, h6
@@ -101,20 +101,18 @@ button
   border-radius: 6px
 
 #header
-  padding: 75px 0 60px
+  $logo_size: 135px
+  padding: 75px 0 60px 0
   text-align: center
-  #logo
-    $logo-size: 135px
-    display: inline-block
+  #logo, #title
     vertical-align: middle
-    background-image: url('/img/badge.svg')
-    background-repeat: no-repeat
-    background-size: $logo-size $logo-size
-    background-position: center center
-    width: $logo-size
-    height: $logo-size
-    @media screen and (min-width: $xs-min)
-      margin-right: 20px
+    @media only screen and (min-width: 1.5*$xs-min)
+      margin: 0 8px
+  #title
+    width: 2.2*$logo_size
+    margin-top: 0
+    margin-bottom: 0
+    display: inline-block
 
 #main
   #bitcamp-blurb
