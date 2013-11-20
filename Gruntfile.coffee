@@ -91,7 +91,7 @@ module.exports = (grunt) ->
           "src/public/sass/*.sass"
         ]
         tasks: ["compass:dist"]
-      js:
+      coffee:
         options:
           interrupt: true
           livereload: true
@@ -105,16 +105,31 @@ module.exports = (grunt) ->
         files: ["src/server/*.coffee"]
         tasks: ["coffee:server"]
 
+    concat:
+      analytics:
+        src: ["src/public/js/ga.js", "public/js/main.min.js"]
+        dest: "public/js/main.min.js"
+        nonull: true
+
+
   grunt.loadNpmTasks "grunt-contrib-copy"
+  grunt.loadNpmTasks "grunt-contrib-concat"
   grunt.loadNpmTasks "grunt-contrib-jade"
   grunt.loadNpmTasks "grunt-contrib-compass"
   grunt.loadNpmTasks "grunt-contrib-uglify"
   grunt.loadNpmTasks "grunt-contrib-coffee"
   grunt.loadNpmTasks "grunt-contrib-watch"
+
+
   grunt.registerTask "default", [
     "copy"
     "jade"
     "compass"
     "coffee"
     "uglify"
+  ]
+
+  grunt.registerTask "production", [
+    "default"
+    "concat:analytics"
   ]
