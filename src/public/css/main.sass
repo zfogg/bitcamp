@@ -50,16 +50,19 @@ body
 
   position: relative
   #background
+    z-index: -100
     position: absolute
     top:   0
     right: 0
     left:  0
+    height: 100%
+
     background: url(/img/bg.png) no-repeat center top
-    min-height: 100%
-    background-size: 100%
-    @media screen and (max-width: 850px)
-      background-size: 850px auto
-    z-index: -2
+
+    @media only screen and (max-width: $xs-max)
+      background-size: auto 100%
+    @media only screen and (min-width: $sm-max)
+      background-size: 100% auto
 
   @media only screen and (max-width: $lg-min)
     font-size: 18px
@@ -101,7 +104,7 @@ button
   $logo_size: 135px
   $offset: 124px
   padding: 7vw 0 5vw 0
-  @media only screen and (max-width: $xs-max)
+  @media only screen and (max-width: $xs-max - 1)
     #logo, #title
       text-align: center
       vertical-align: middle
