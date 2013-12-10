@@ -5,24 +5,18 @@
 
 #main
   white-space: pre-line
+
   #bitcamp-blurb
     text-align: center
     @media screen and (min-width: $sm-min)
       text-align: right
-    .wrapper
-      @media only screen and (min-width: $sm-min)
-        padding-right: 11px
 
   #bitcamp-register
     @media screen and (max-width: $xs-max)
       text-align: center
-    .wrapper
-      @media only screen and (min-width: $sm-min)
-        padding-left: 11px
-    a
-      button
-        background-color: $orange
-        @include box-shadow(2px 2px 1px darken($darkgrey_ish, 7%))
+    button
+      background-color: $orange
+      @include box-shadow(2px 2px 1px darken($darkgrey_ish, 7%))
 
   #bitcamp-summary
     text-align: center
