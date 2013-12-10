@@ -1,0 +1,19 @@
+@import "globals"
+
+
+#header
+  $offset: 124px
+  padding: 7vw 0 5vw 0
+  text-transform: lowercase
+  @media only screen and (max-width: $xs-max - 1)
+    #logo, #title
+      text-align: center
+      vertical-align: middle
+  @media only screen and (min-width: $sm-min)
+    #logo img
+      margin-right: $offset
+      float: right
+    #title h1
+      margin-left: -1*$offset
+      line-height: $logo-height
+

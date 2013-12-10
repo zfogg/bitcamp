@@ -6,6 +6,7 @@ module.exports = (grunt) ->
       public_static:
         files: [
           expand: true
+          flatten: true
           src: ["src/public/*"]
           dest: "public/"
           filter: "isFile"
@@ -78,7 +79,7 @@ module.exports = (grunt) ->
         options:
           interrupt: true
         files: ["src/public/css/*.scss", "src/public/css/*.sass"]
-        tasks: ["compass:main", "cssmin:main"]
+        tasks: ["compass", "cssmin"]
 
       coffee:
         options:
