@@ -1,0 +1,52 @@
+@import "lib/globals"
+
+@import "compass/css3"
+
+
+#main
+  white-space: pre-line
+  #bitcamp-blurb
+    text-align: center
+    @media screen and (min-width: $sm-min)
+      text-align: right
+    .wrapper
+      @media only screen and (min-width: $sm-min)
+        padding-right: 11px
+
+  #bitcamp-register
+    @media screen and (max-width: $xs-max)
+      text-align: center
+    .wrapper
+      @media only screen and (min-width: $sm-min)
+        padding-left: 11px
+    a
+      button
+        background-color: $orange
+        @include box-shadow(2px 2px 1px darken($darkgrey_ish, 7%))
+
+  #bitcamp-summary
+    text-align: center
+    font-size: 2.3em
+
+  #bitcamp-description p
+    text-align: center
+    font-size: 1.4em
+
+  #bitcamp-collaborate
+    text-align: center
+    p
+      font-size: 1.4em
+
+    #bitcamp-contact-us button
+      display: inline-block
+      position: relative
+      background: transparent
+      border: 1px solid $white
+
+  .button-typo
+    font-size: 1.25em
+    padding: 10px 16px
+    @include transition(all 0.2s)
+  .button-typo:hover
+    background: $white !important
+    color: $orange

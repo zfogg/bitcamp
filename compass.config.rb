@@ -2,7 +2,7 @@
 http_path        = "public/"
 css_dir          = "build/css/"
 sass_dir         = "src/public/css/"
-images_dir       = "public/images/"
+images_dir       = "public/img/"
 javascripts_dir  = "public/js/"
 relative_assets  = true
 line_comments    = false

@@ -1,0 +1,64 @@
+@import "globals"
+
+
+*
+  @include box-sizing(border-box)
+  @include selection("", $orange)
+
+
+body
+  color: $white
+  background-color: $black_ish
+  font-family: 'aleo-regular', sans-serif
+  text-shadow: 1px 0 $grey_ish
+  min-width: 300px
+  position: relative
+  @media only screen and (max-width: $lg-min)
+    font-size: 18px
+  @media only screen and (max-width: $md-max)
+    font-size: 17px
+  @media only screen and (max-width: $sm-max)
+    font-size: 14px
+  @media only screen and (max-width: $xs-max)
+    font-size: 13px
+  @media only screen and (max-width: $xs-min)
+    font-size: 11px
+
+
+#background
+  z-index: -100
+  position: absolute
+  top:   0
+  right: 0
+  left:  0
+  height: 100%
+  background: url(/img/bg.png) no-repeat center top
+  @media only screen and (max-width: $xs-max)
+    background-size: auto 100%
+  @media only screen and (min-width: $sm-max)
+    background-size: 100% auto
+
+
+p, h1, h2, h3, h4, h5, h6
+  line-height: 1.2em
+  margin-bottom: 20px
+p
+  font-size: 1em
+  padding: 5px 0
+h1
+  font-size: 5.9em
+  font-family: 'aleo-bold', sans-serif
+h2
+  font-size: 1.8em
+
+hr
+  border-top: 1px dashed $white
+  opacity: 0.2
+  margin: 50px 20px
+
+button
+  font-family: 'aleo-bold', sans-serif
+  line-height: 1.2em
+  border: none
+  color: $white
+  border-radius: 6px

@@ -1,0 +1,30 @@
+$white:        #ffffff
+$grey_ish:     #555555
+$darkgrey_ish: #1f1f1f
+$black_ish:    #030303
+$orange:       #f15a24
+
+
+$xs-max: 768px
+$sm-max: 992px
+$md-max: 1200px
+
+$xs-min: 320px
+$sm-min: 768px
+$md-min: 992px
+$lg-min: 1200px
+
+
+$background-height: 1278px
+$logo-height:       135px
+
+
+$vendor_prefixes: ("-webkit-", "-moz-", "-o-", "")
+
+
+@mixin selection($color, $background)
+  @each $prefix in $vendor_prefixes
+    ::#{$prefix}selection
+      color: $color
+      background: $background
+

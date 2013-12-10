@@ -1,0 +1,19 @@
+@import "globals"
+
+
+#footer
+  font-size: 1em
+  padding-bottom: 80px
+  ul.footer-links
+    a
+      color: $white
+    text-align: center
+    li
+      list-style: none
+      margin-bottom: 10px
+      &.spacer
+        display: none
+        margin: 0 10px
+      @media screen and (min-width: $xs-max)
+        display: inline !important
+
