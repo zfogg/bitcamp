@@ -20,6 +20,7 @@
   "dependencies": {
     "bootstrap": "~3.0.2",
     "jquery": "~2.0.3",
-    "underscore": "~1.5.2"
+    "underscore": "~1.5.2",
+    "angular": "~1.2.4"
   }
 }

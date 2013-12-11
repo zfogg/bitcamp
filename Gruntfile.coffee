@@ -35,13 +35,17 @@ module.exports = (grunt) ->
           ]
 
     coffee:
-      public:
+      main:
         options:
           sourceMap: true
-          bare: true
         files:
-          "build/js/main.js": ["src/public/js/main.coffee"]
-
+          "build/js/app.js": [
+            "src/public/js/controllers.coffee"
+            "src/public/js/directives.coffee"
+            "src/public/js/filters.coffee"
+            "src/public/js/services.coffee"
+            "src/public/js/app.coffee"
+          ]
       server:
         options:
           bare: true
@@ -50,50 +54,59 @@ module.exports = (grunt) ->
 
     concat:
       analytics:
-        src: ["src/public/js/ga.js", "build/js/main.js"]
-        dest: "build/js/main.js"
+        src: [
+          "src/public/js/ga.js"
+          "build/js/app.js"
+        ]
+        dest: "build/js/app.js"
         nonull: true
 
     uglify:
-      public:
+      main:
         options:
           sourceMappingURL: "/js/main.js.map"
-          sourceMapIn: "build/js/main.js.map"
+          sourceMapIn: "build/js/app.js.map"
           sourceMap: "public/js/main.js.map"
         files:
           "public/js/main.min.js": [
+            "build/js/app.js"
+          ]
+      vendor:
+        files:
+          "public/js/vendor.min.js": [
+            "components/underscore/underscore-min.js"
             "components/jquery/jquery.min.js"
-            #"components/underscore/underscore-min.js"
-            "build/js/main.js"
+            "components/angular/angular.min.js"
           ]
 
     watch:
       html:
         options:
           interrupt: true
-          livereload: true
         files: ["src/public/jade/**/*.jade"]
         tasks: ["jade"]
-
       css:
         options:
           interrupt: true
-        files: ["src/public/css/*.scss", "src/public/css/*.sass"]
+        files: [
+          "src/public/css/**/*.scss"
+          "src/public/css/**/*.sass"
+        ]
         tasks: ["compass", "cssmin"]
-
       coffee:
         options:
           interrupt: true
-          livereload: true
         files: ["src/public/js/**/*.coffee"]
-        tasks: ["coffee:public", "uglify:public"]
-
+        tasks: ["coffee:main", "uglify:main"]
       livereload:
         options:
-          interrupt: true
           livereload: true
-        files: ["public/css/*.css"]
-
+        files: [
+          "public/css/**/*.css"
+          "public/js/**/*.js"
+          "public/index.html"
+          "server.js"
+        ]
       server:
         files: ["src/server/*.coffee"]
         tasks: ["coffee:server"]

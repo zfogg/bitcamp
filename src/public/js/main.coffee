@@ -1,1 +1,0 @@
-console.log "This one time, at bitcamp . . ."
