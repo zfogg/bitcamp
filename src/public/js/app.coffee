@@ -6,6 +6,4 @@ bitcamp = angular.module 'bitcamp', [
   'bitcamp.controllers'
 ]
 
-bitcamp.config ['$routeProvider']
-
 console.log 'This one time, at bitcamp . . .'

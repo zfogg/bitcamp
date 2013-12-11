@@ -1,6 +1,6 @@
 !!! 5
 
-html(ng-app)
+html(ng-app="bitcamp")
 
   head
     meta(charset="utf-8")
@@ -24,19 +24,19 @@ html(ng-app)
   body
     #background
 
-    #content.wrapper
+    #bitcamp.wrapper(ng-controller="BitcampCtrl")
 
-      .header-container
+      .header-container(ng-controller="HeaderCtrl")
         header.wrapper.clearfix
           #header
             include header
 
-      .main-container
+      .main-container(ng-controller="ContentCtrl")
         .main.wrapper.clearfix
           #main
             block index
 
-      .footer-container
+      .footer-container(ng-controller="FooterCtrl")
         footer.wrapper.clearfix
           #footer
             include footer

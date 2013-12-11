@@ -77,6 +77,7 @@ module.exports = (grunt) ->
             "components/underscore/underscore-min.js"
             "components/jquery/jquery.min.js"
             "components/angular/angular.min.js"
+            "components/angular-route/angular-route.min.js"
           ]
 
     watch:
